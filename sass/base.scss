@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: $color-grey;
+  &:hover {
+    color: lighten($color-grey, 10);
+  }
+  &:active,
+  &:visited,
+  &:focus {
+    outline: none;
+  }
+}
+html {
+  font-size: 62.5%;
+}
