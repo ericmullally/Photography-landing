@@ -12,6 +12,7 @@
     rgba(darken($color-primary, 20), 0.5)
   );
   box-shadow: rgba(0, 0, 0, 0.384) -6px 10px 13px 0px;
+
   &__pics {
     grid-row: 1 / span 1;
     grid-column: 1/-1;
@@ -67,5 +68,21 @@
       margin-top: 3rem;
       font-size: 3rem;
     }
+  }
+  .adventure {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-secondary, 0.3),
+        rgba($color-grey, 0.3)
+      ),
+      url("https://images.unsplash.com/photo-1464716821973-e1031cfa43dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+  }
+  .events {
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.767),
+        rgba($color-grey, 0.3)
+      ),
+      url("https://images.unsplash.com/photo-1525299917518-9cb5c095c978?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
   }
 }

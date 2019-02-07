@@ -41,7 +41,7 @@ html {
     width: 5.5rem;
     height: 5.5rem;
     background-color: #05050c;
-    z-index: 1;
+    z-index: 3;
     border-radius: 50%; }
   .menu__blank--1, .menu__blank--2, .menu__blank--3 {
     background-color: #9e9d94;
@@ -72,7 +72,8 @@ html {
     transition: all 0.3s;
     backface-visibility: hidden;
     text-align: center;
-    border-radius: 50%; }
+    border-radius: 50%;
+    z-index: 2; }
   .menu__logo {
     width: 10rem; }
   .menu__list {
@@ -82,7 +83,8 @@ html {
     transform: translate(50%, -50%);
     list-style: none;
     transition: all 0.5s;
-    transition-delay: 0.1s; }
+    transition-delay: 0.1s;
+    z-index: 2; }
   .menu__item {
     font-size: 4rem;
     color: #feef9c;
@@ -145,7 +147,7 @@ html {
     margin: 0 auto -2.3rem auto;
     text-align: center;
     background-color: white;
-    z-index: 1; }
+    z-index: 0; }
   .about__text {
     border-top: 1px solid rgba(2, 2, 201, 0.6);
     border-bottom: 1px solid rgba(2, 2, 201, 0.6);
@@ -236,3 +238,7 @@ html {
     .card__info__price {
       margin-top: 3rem;
       font-size: 3rem; }
+  .card .adventure {
+    background-image: linear-gradient(to right, rgba(2, 2, 201, 0.3), rgba(158, 157, 148, 0.3)), url("https://images.unsplash.com/photo-1464716821973-e1031cfa43dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"); }
+  .card .events {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.767), rgba(158, 157, 148, 0.3)), url("https://images.unsplash.com/photo-1525299917518-9cb5c095c978?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"); }
