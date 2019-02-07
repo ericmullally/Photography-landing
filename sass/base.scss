@@ -5,6 +5,10 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: "Lora", serif;
+  letter-spacing: 0.2rem;
+}
 a {
   text-decoration: none;
   color: $color-grey;
