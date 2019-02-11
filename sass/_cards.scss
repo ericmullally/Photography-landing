@@ -1,6 +1,5 @@
 .card {
-  margin-bottom: 5rem;
-  width: 60vw;
+  grid-column: span 1;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 30rem repeat(auto-fit, minmax(1rem, max-content));

@@ -34,6 +34,15 @@ html {
   top: 0;
   left: 0;
   width: 100%; }
+  @media only screen and (min-width: 1020px) {
+    .menu {
+      background-color: #05050c;
+      padding: 0.5rem;
+      display: grid;
+      align-items: end;
+      grid-template-columns: 10rem 1fr;
+      position: fixed;
+      z-index: 3; } }
   .menu__btn {
     position: fixed;
     top: 0.5rem;
@@ -43,12 +52,18 @@ html {
     background-color: #05050c;
     z-index: 3;
     border-radius: 50%; }
+    @media only screen and (min-width: 1020px) {
+      .menu__btn {
+        display: none; } }
   .menu__blank--1, .menu__blank--2, .menu__blank--3 {
     background-color: #9e9d94;
     width: 3rem;
     height: 2px;
     position: absolute;
     transition: all 0.5s; }
+    @media only screen and (min-width: 1020px) {
+      .menu__blank--1, .menu__blank--2, .menu__blank--3 {
+        display: none; } }
   .menu__blank--1 {
     top: 29%;
     right: 50%;
@@ -74,6 +89,9 @@ html {
     text-align: center;
     border-radius: 50%;
     z-index: 2; }
+    @media only screen and (min-width: 1020px) {
+      .menu__back {
+        display: none; } }
   .menu__logo {
     width: 10rem; }
   .menu__list {
@@ -85,11 +103,24 @@ html {
     transition: all 0.5s;
     transition-delay: 0.1s;
     z-index: 2; }
+    @media only screen and (min-width: 1020px) {
+      .menu__list {
+        position: relative;
+        transform: translate(0);
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        top: 0;
+        right: 0; } }
   .menu__item {
-    font-size: 4rem;
+    font-size: 5vw;
     color: #feef9c;
     display: inline-block;
     margin-bottom: 4rem; }
+    @media only screen and (min-width: 1020px) {
+      .menu__item {
+        margin-bottom: 0;
+        font-size: 2vw; } }
 
 .hero {
   width: 100vw;
@@ -123,73 +154,69 @@ html {
   .heading--1 {
     font-weight: 400;
     font-size: 5vw;
-    margin-left: 25%;
+    margin-left: 29%;
     width: 75%;
     padding: 0.5rem 1rem;
     background-color: rgba(158, 157, 148, 0.9); }
+    @media only screen and (min-width: 1020px) {
+      .heading--1 {
+        font-size: 3vw; } }
   .heading--2 {
     font-weight: 400;
     font-size: 3vw;
-    margin-left: 30%;
+    margin-left: 33%;
     width: 70%;
     color: #fcd705; }
+    @media only screen and (min-width: 1020px) {
+      .heading--2 {
+        font-size: 2vw; } }
 
 .about {
   padding: 1rem;
   text-align: center;
-  margin-top: 3rem; }
+  margin: 7rem 0; }
   .about__header {
     position: relative;
-    width: 60%;
-    font-size: 3rem;
+    width: 40%;
+    font-size: 3vw;
     font-weight: 400;
     padding: 0.5rem;
     margin: 0 auto -2.3rem auto;
     text-align: center;
     background-color: white;
     z-index: 0; }
+    @media only screen and (min-width: 1020px) {
+      .about__header {
+        width: 30%; } }
+    @media only screen and (max-width: 760px) {
+      .about__header {
+        margin: 0 auto -1.3rem auto;
+        font-size: 4vw; } }
   .about__text {
     border-top: 1px solid rgba(2, 2, 201, 0.6);
     border-bottom: 1px solid rgba(2, 2, 201, 0.6);
-    padding: 3rem 0;
-    font-size: 1.5rem; }
-
-.story {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  align-items: center;
-  width: 100%;
-  height: 40vw;
-  margin: 3rem auto;
-  background-image: linear-gradient(105deg, rgba(158, 157, 148, 0.7) 0%, rgba(254, 247, 207, 0.5) 0%), url("https://images.unsplash.com/photo-1531983412531-1f49a365ffed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
-  box-shadow: rgba(0, 0, 0, 0.3) -5px 7px 20px 0px;
-  background-position: center;
-  background-size: cover; }
-  .story__header {
-    padding: 0.3rem;
-    border-bottom: 2px solid rgba(2, 2, 201, 0.5); }
-  .story__text {
-    padding: 2rem;
-    font-size: 1.5rem; }
-  .story__points {
-    font-size: 1.5rem;
-    background-color: rgba(182, 182, 175, 0.8);
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .story__list {
-    list-style: none; }
-  .story__item {
-    margin-bottom: 1rem; }
+    padding: 7vw 0;
+    font-size: 1.5vw; }
+    @media only screen and (max-width: 760px) {
+      .about__text {
+        font-size: 2.5vw; } }
 
 .packages {
   display: grid;
+  padding: 5rem;
+  grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+  grid-gap: 5rem;
   justify-content: center; }
+  @media only screen and (max-width: 500px) {
+    .packages {
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); } }
+  @media only screen and (min-width: 1400px) {
+    .packages {
+      grid-template-columns: repeat(auto-fill, minmax(45rem, 1fr)); } }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   grid-auto-rows: 20.5rem 15rem;
   grid-auto-flow: dense;
   grid-gap: 2rem;
@@ -198,12 +225,18 @@ html {
   align-items: center; }
   .gallery__heading {
     grid-column: 1/-1;
-    font-size: 3rem;
+    font-size: 3vw;
     font-weight: 400;
     border-bottom: 1px solid #0202c9;
     text-align: center;
     width: 90%;
     padding: 1rem; }
+    @media only screen and (max-width: 500px) {
+      .gallery__heading {
+        font-size: 4.5vw; } }
+  @media only screen and (min-width: 1020px) {
+    .gallery {
+      padding: 5rem; } }
 
 .footer {
   padding: 3rem;
@@ -215,8 +248,7 @@ html {
   justify-items: center; }
 
 .card {
-  margin-bottom: 5rem;
-  width: 60vw;
+  grid-column: span 1;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 30rem repeat(auto-fit, minmax(1rem, max-content));
@@ -286,6 +318,9 @@ html {
     grid-area: 1 / 1 / span 2 / span 2; }
   .image:nth-child(3n) {
     grid-column: span 2; }
+    @media only screen and (max-width: 500px) {
+      .image:nth-child(3n) {
+        grid-column: span 1; } }
   .image--1 {
     background-image: url("https://images.unsplash.com/photo-1519834785169-98be25ec3f84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"); }
   .image--2 {
@@ -326,6 +361,7 @@ html {
 
 .footer__item {
   border-bottom: 1px solid transparent;
+  padding: 0.5rem;
   transition: all 0.3s;
   backface-visibility: hidden; }
   .footer__item:hover {

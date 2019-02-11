@@ -13,6 +13,7 @@
   }
   &__item {
     border-bottom: 1px solid transparent;
+    padding: 0.5rem;
     transition: all 0.3s;
     backface-visibility: hidden;
     &:hover {

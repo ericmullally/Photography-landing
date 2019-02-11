@@ -34,92 +34,78 @@
   &--1 {
     font-weight: 400;
     font-size: 5vw;
-    margin-left: 25%;
+    margin-left: 29%;
     width: 75%;
     padding: 0.5rem 1rem;
     background-color: rgba($color-grey, 0.9);
+    @include res(laptop) {
+      font-size: 3vw;
+    }
   }
   &--2 {
     font-weight: 400;
     font-size: 3vw;
-    margin-left: 30%;
+    margin-left: 33%;
     width: 70%;
     color: $color-primary;
+    @include res(laptop) {
+      font-size: 2vw;
+    }
   }
 }
 
 .about {
   padding: 1rem;
   text-align: center;
-  margin-top: 3rem;
+  margin: 7rem 0;
   &__header {
     position: relative;
-    width: 60%;
-    font-size: 3rem;
+    width: 40%;
+    font-size: 3vw;
     font-weight: 400;
     padding: 0.5rem;
     margin: 0 auto -2.3rem auto;
     text-align: center;
     background-color: white;
     z-index: 0;
+
+    @include res(laptop) {
+      width: 30%;
+    }
+
+    @include res(tablet) {
+      margin: 0 auto -1.3rem auto;
+      font-size: 4vw;
+    }
   }
 
   &__text {
     border-top: 1px solid rgba($color-secondary, 0.6);
     border-bottom: 1px solid rgba($color-secondary, 0.6);
-    padding: 3rem 0;
-    font-size: 1.5rem;
+    padding: 7vw 0;
+    font-size: 1.5vw;
+    @include res(tablet) {
+      font-size: 2.5vw;
+    }
   }
 }
 
-.story {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  align-items: center;
-  width: 100%;
-  height: 40vw;
-  margin: 3rem auto;
-
-  background-image: linear-gradient(
-      105deg,
-      rgba($color-grey, 0.7) 0%,
-      rgba(lighten($color-primary, 40), 0.5) 0%
-    ),
-    url("https://images.unsplash.com/photo-1531983412531-1f49a365ffed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
-  box-shadow: rgba(0, 0, 0, 0.3) -5px 7px 20px 0px;
-  background-position: center;
-  background-size: cover;
-  &__header {
-    padding: 0.3rem;
-    border-bottom: 2px solid rgba($color-secondary, 0.5);
-  }
-
-  &__text {
-    padding: 2rem;
-    font-size: 1.5rem;
-  }
-  &__points {
-    font-size: 1.5rem;
-    background-color: rgba(lighten($color-grey, 10), 0.8);
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  &__list {
-    list-style: none;
-  }
-  &__item {
-    margin-bottom: 1rem;
-  }
-}
 .packages {
   display: grid;
+  padding: 5rem;
+  grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+  grid-gap: 5rem;
   justify-content: center;
+  @include res(mobile) {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  }
+  @include res(desktop) {
+    grid-template-columns: repeat(auto-fill, minmax(45rem, 1fr));
+  }
 }
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   grid-auto-rows: 20.5rem 15rem;
   grid-auto-flow: dense;
   grid-gap: 2rem;
@@ -128,12 +114,18 @@
   align-items: center;
   &__heading {
     grid-column: 1/-1;
-    font-size: 3rem;
+    font-size: 3vw;
     font-weight: 400;
     border-bottom: 1px solid $color-secondary;
     text-align: center;
     width: 90%;
     padding: 1rem;
+    @include res(mobile) {
+      font-size: 4.5vw;
+    }
+  }
+  @include res(laptop) {
+    padding: 5rem;
   }
 }
 .footer {

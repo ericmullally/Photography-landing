@@ -9,3 +9,26 @@ $color-black: rgb(5, 5, 12);
 .color-primary {
   color: rgba($color-primary, 0.9);
 }
+
+@mixin res($bp) {
+  @if $bp == desktop {
+    @media only screen and (min-width: 1400px) {
+      @content;
+    }
+  }
+  @if $bp == laptop {
+    @media only screen and (min-width: 1020px) {
+      @content;
+    }
+  }
+  @if $bp == tablet {
+    @media only screen and (max-width: 760px) {
+      @content;
+    }
+  }
+  @if $bp == mobile {
+    @media only screen and (max-width: 500px) {
+      @content;
+    }
+  }
+}
