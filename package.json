@@ -7,7 +7,7 @@
     "watch": "node-sass sass/main.scss src/index.css -w"
   },
   "author": "Eric mullally",
-  "license": "MIT",
+  "license": "",
   "dependencies": {
     "autoprefixer": "^9.4.5",
     "concat": "^1.0.3",
