@@ -434,6 +434,9 @@ html {
       grid-template-rows: 20rem repeat(2, minmax(max-content, 1fr));
       align-content: center;
       justify-content: center; } }
+  @media only screen and (max-width: 500px) {
+    .testimonials__person {
+      margin-left: 2rem; } }
 
 .testimonials__header {
   margin: 2rem 0;

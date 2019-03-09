@@ -16,6 +16,9 @@
       align-content: center;
       justify-content: center;
     }
+    @include res(mobile) {
+      margin-left: 2rem;
+    }
   }
   &__header {
     margin: 2rem 0;
