@@ -1,6 +1,7 @@
 const navBtn = document.querySelector(".menu__btn");
 const menuBackground = document.querySelector(".menu__back");
 const list = document.querySelector(".menu__list");
+const mainHeader = document.querySelector(".heading--1");
 
 const getScrollPos = () => {
   return document.documentElement.scrollTop;
@@ -23,6 +24,7 @@ navBtn.addEventListener("click", () => {
     lines[5].style.transform = "";
   }
 });
-const positionFromTop = this.addEventListener("scroll", e => {
-  console.log(getScrollPos());
+this.addEventListener("scroll", e => {
+  // const position = getScrollPos();
+  // mainHeader.style.transform = `translateY(${position / 10}px)`;
 });
